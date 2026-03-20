@@ -82,12 +82,17 @@ const PRICE_DATA: CountryData[] = [
           { name: '墨尔本大学', enName: 'University of Melbourne', price: '¥6,000' },
           { name: '悉尼大学', enName: 'University of Sydney', price: '¥3,000' },
           { name: '新南威尔士大学', enName: 'University of New South Wales (UNSW)', price: '¥3,000' },
-          { name: '澳国立大学', enName: 'Australian National University (ANU)', price: '¥3,000' },
+          { name: '澳国立大学（普通｜直录）', enName: 'Australian National University (ANU)', price: '¥3000｜¥9.8万' },
           { name: '昆士兰大学', enName: 'University of Queensland (UQ)', price: '¥3,000' },
           { name: '西澳大学', enName: 'University of Western Australia (UWA)', price: '¥3,000' },
           { name: '阿德莱德大学', enName: 'University of Adelaide', price: '¥3,000' },
           { name: '莫那什大学', enName: 'Monash University', price: '¥3,000' },
+          { name: '悉尼科技大学', enName: 'University of Technology Sydney', price: '¥3000' },
+          { name: '科廷大学', enName: 'Curtin University', price: '¥3000' },
+          { name: '纽卡斯尔大学', enName: 'University of Newcastle', price: '¥3000' },
+          { name: '昆士兰科技大学', enName: 'Queensland University of Technology', price: '¥3000' },
           { name: '澳洲其他', enName: 'Other Australian Universities', price: '¥3,000' },
+          { name: '学术背景低于录取标准', enName: 'Customized Background Enhancement', price: '咨询定价' },
         ]
       }
     ]
@@ -138,7 +143,7 @@ const PRICE_DATA: CountryData[] = [
           { name: '香港浸会大学', enName: 'Hong Kong Baptist University (HKBU)', price: '¥25,000' },
           { name: '香港岭南大学', enName: 'Lingnan University', price: '¥25,000' },
           { name: '香港都会大学', enName: 'Hong Kong Metropolitan University (HKMU)', price: '¥25,000' },
-          { name: '香港高等教育科技学院（VTC 训练局）', enName: 'THEi (VTC)', price: '¥25,000' },
+          { name: '香港高科院（普通｜直录）', enName: 'THEI', price: '¥2.5万｜¥18万' },
           { name: '香港树仁大学', enName: 'Hong Kong Shue Yan University (HKSYU)', price: '¥20,000' },
           { name: '香港恒生大学', enName: 'The Hang Seng University of Hong Kong (HSUHK)', price: '¥20,000' },
           { name: '珠海学院', enName: 'Chu Hai College of Higher Education', price: '¥20,000' },
