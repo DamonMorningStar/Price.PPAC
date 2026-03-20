@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand-blue: #0883c6;
+  --color-hermes-orange: #E65A28;
+  --color-gold: #D4AF37;
+  --color-deep-navy: #0A192F;
+}
+
+body {
+  @apply bg-[#fcfcfd] text-slate-900 font-serif;
+}
+
+/* For English body text that should use Aptos (Inter as fallback) */
+.font-aptos {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* For titles and Chinese text */
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.premium-gradient {
+  background: radial-gradient(circle at top left, #1a3a5f 0%, #0A192F 50%, #0883c6 100%);
+}
+
+.gold-text {
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-2xl border border-white/40 shadow-[0_20px_50px_rgba(8,131,198,0.12)];
+}
+
+.orange-glow {
+  box-shadow: 0 0 40px rgba(230, 90, 40, 0.15), 0 0 80px rgba(230, 90, 40, 0.05);
+}
+
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
