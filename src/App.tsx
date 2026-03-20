@@ -652,8 +652,7 @@ const Header = () => {
             </span>
           </div>
           
-          <h1 className="text-6xl md:text-[9rem] font-serif font-black mb-10 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white via-gold to-[#D4AF37] drop-shadow-[0_15px_40px_rgba(212,175,55,0.4)] filter brightness-110"
-              style={{ textShadow: '0 1px 0 #B38728, 0 2px 0 #AA771C, 0 3px 0 #996611, 0 4px 0 #885500, 0 5px 0 #774400, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25)' }}>
+          <h1 className="text-6xl md:text-[9rem] font-serif font-black mb-10 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white via-gold to-hermes-orange drop-shadow-[0_15px_40px_rgba(212,175,55,0.4)]">
             服务价格
           </h1>
           
@@ -706,7 +705,7 @@ const Footer = () => (
             Elite Global Services
           </div>
           <h3 className="text-4xl md:text-6xl font-serif font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white via-gold to-hermes-orange drop-shadow-[0_10px_20px_rgba(212,175,55,0.4)]">
-            TopUni Global Education<span className="text-hermes-orange">.</span>
+            TopUni Global Education
           </h3>
         </div>
 
