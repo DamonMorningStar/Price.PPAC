@@ -645,15 +645,16 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="inline-flex items-center space-x-3 mb-8 px-8 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-3xl shadow-[0_0_40px_rgba(212,175,55,0.3)]">
-            <Sparkles className="w-4 h-4 text-gold animate-pulse" />
-            <span className="text-gold text-[10px] md:text-[12px] font-black tracking-[0.6em] uppercase whitespace-nowrap drop-shadow-sm">
+          <div className="flex w-[90%] md:w-auto mx-auto items-center justify-center space-x-2 md:space-x-3 mb-8 px-4 py-2 md:px-8 md:py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-3xl shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+            <Sparkles className="w-3 h-3 md:w-4 h-4 text-gold animate-pulse flex-shrink-0" />
+            <span className="text-gold text-[9px] md:text-[12px] font-black tracking-[0.2em] md:tracking-[0.6em] uppercase whitespace-nowrap drop-shadow-sm">
               Premium Planning Global Service
             </span>
           </div>
           
-          <h1 className="text-6xl md:text-[9rem] font-serif font-black mb-10 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white via-gold to-hermes-orange drop-shadow-[0_15px_40px_rgba(212,175,55,0.4)]">
-            服务价格
+          <h1 className="text-5xl md:text-7xl font-serif font-black mb-10 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white via-gold to-hermes-orange drop-shadow-[0_15px_30px_rgba(212,175,55,0.4)] leading-tight">
+            服务价格<br />
+            <span className="text-2xl md:text-4xl tracking-[0.2em] uppercase block mt-2">OUR SERVICE PRICE</span>
           </h1>
           
           <div className="flex flex-nowrap items-center justify-center gap-4 md:gap-12">
