@@ -40,6 +40,15 @@ interface PriceItem {
   note?: string;
   undergradMajors?: Major[];
   masterMajors?: Major[];
+  // New fields for China projects
+  projectType?: string;
+  targetUniversity?: string;
+  majorsList?: string;
+  domesticTuition?: string;
+  overseasTuition?: string;
+  requirements?: string;
+  description?: string;
+  isDomesticOnly?: boolean;
 }
 
 interface CountryData {
@@ -614,6 +623,360 @@ const PRICE_DATA: CountryData[] = [
         ]
       }
     ]
+  },
+  {
+    id: 'china',
+    name: '中国',
+    enName: 'China',
+    flag: '🇨🇳',
+    categories: [
+      {
+        title: 'University Projects',
+        items: [
+          {
+            name: '上海交通大学 3+1',
+            enName: 'Shanghai Jiao Tong University',
+            price: '¥6.8万',
+            projectType: '3+1',
+            targetUniversity: '英国、澳大利亚、新西兰等多国教育部认可院校 (含考文垂大学、赫尔大学、梅西大学等)',
+            majorsList: '国际商务、国际金融、艺术设计、计算机软件开发 (创意设计与数码动画)，可对接经济管理类、电子信息类、机械工程类等多领域专业',
+            domesticTuition: '8.8 万 / 年',
+            overseasTuition: '约 25-30 万 / 年',
+            requirements: '限普高生，高考英语 80+',
+            description: '自主招生，学位受教育部留学服务中心认证'
+          },
+          {
+            name: '上海对外经贸 + RMIT 3+1',
+            enName: 'SUIBE + RMIT',
+            price: '¥6.8万',
+            projectType: '3+1',
+            targetUniversity: '澳大利亚皇家墨尔本理工大学 (RMIT)',
+            majorsList: '国际经济与贸易、金融学、物流与供应链管理、会计学、市场营销、商务信息系统等商科全方向',
+            domesticTuition: '6.8 万 / 年',
+            overseasTuition: '约 21 万 / 年',
+            requirements: '接受普高生和国际生，国际生要求 IELTS 5.5 或同等，提供自主招生考试全程培训',
+            description: '教育部备案项目，完成国内阶段可获 RMIT 商务文凭 / 商学副学士学位'
+          },
+          {
+            name: '上海对外经贸 + 英国中央兰开夏大学 3+1',
+            enName: 'SUIBE + UCLan',
+            price: '¥4.5万',
+            projectType: '3+1',
+            targetUniversity: '英国中央兰开夏大学 (UCLan)',
+            majorsList: '国际商务交流、国际商务、工商管理、商务英语上外贸',
+            domesticTuition: '6 万 / 年',
+            overseasTuition: '约 12 万 / 年',
+            requirements: '接受普高生和国际生，普高生高考英语 90+，国际生要求 IELTS 5.5 或同等，提供自主招生考试全程培训',
+            description: '上海市教委批准设立，办学历史超 20 年'
+          },
+          {
+            name: '西交利物浦大学 - 蒙纳士 2+2',
+            enName: 'XJTLU - Monash',
+            price: '¥15万',
+            projectType: '2+2',
+            targetUniversity: '澳大利亚蒙纳士大学',
+            majorsList: '工商管理学、会计学、金融和经济学，可对接商学、经济学、金融学、会计学、银行与金融、市场营销等方向',
+            domesticTuition: '21.8 万 / 年',
+            overseasTuition: '约 22 万 / 年',
+            requirements: '限普高生，高考英语 80+',
+            description: '蒙纳士大学为澳洲八大、QS 前 50 名校，学分豁免不超过总学分 1/3'
+          },
+          {
+            name: '西交利物浦大学 - 利物浦 2+2',
+            enName: 'XJTLU - Liverpool',
+            price: '¥48万',
+            projectType: '2+2',
+            targetUniversity: '英国利物浦大学',
+            majorsList: '国际教育学、国际金融管理、会计学、商业数据分析、国际信息工程、工商管理、经济学、计算机科学与技术等全学科方向',
+            domesticTuition: '9.3 万 / 年',
+            overseasTuition: '约 25 万 / 年',
+            requirements: '限普高生且本科线上，高考英语 100+/IELTS 5.5+',
+            description: '西交利物浦大学与利物浦大学联合培养，毕业获利物浦大学学士学位'
+          },
+          {
+            name: '华东师范大学 3+1',
+            enName: 'East China Normal University',
+            price: '¥6.8万',
+            projectType: '3+1',
+            targetUniversity: '英国、澳大利亚等多所教育部认可院校 (含埃塞克斯大学、赫瑞瓦特大学等)',
+            majorsList: '商务会计、国际理财、国际贸易与商务、商务管理、创意艺术与设计',
+            domesticTuition: '7.2 万 / 年',
+            overseasTuition: '约 20 万 / 年',
+            requirements: '限普高生',
+            description: '中留服与 SQA 双重认证项目'
+          },
+          {
+            name: '华东师范大学 2+2 伯明翰',
+            enName: 'ECNU - Birmingham',
+            price: '¥9.8万',
+            projectType: '2+2',
+            targetUniversity: '英国伯明翰大学',
+            majorsList: '会计与金融、商业管理、市场营销等商科方向',
+            domesticTuition: '8.2 万 / 年',
+            overseasTuition: '约 20 万 / 年',
+            requirements: '限普高生',
+            description: '英国罗素集团名校定向班'
+          },
+          {
+            name: '华东师范大学 2+2 麦考瑞',
+            enName: 'ECNU - Macquarie',
+            price: '¥6.8万',
+            projectType: '2+2',
+            targetUniversity: '澳大利亚麦考瑞大学',
+            majorsList: '商科、计算机（AI / 数据科学）、教育学华东师大',
+            domesticTuition: '7.8 万 / 年',
+            overseasTuition: '约 25~28 万 / 年',
+            requirements: '限普高生',
+            description: '澳洲顶尖商科院校，会计、金融专业优势突出'
+          },
+          {
+            name: '上海财经大学 3+1',
+            enName: 'SUFE 3+1',
+            price: '¥9.8万',
+            projectType: '3+1',
+            targetUniversity: '英国、澳大利亚等多国教育部认可院校',
+            majorsList: '国际理财、商务会计、国际商务管理、国际贸易与商务',
+            domesticTuition: '7.56 万 / 年',
+            overseasTuition: '约 22 万 / 年',
+            requirements: '限普高生',
+            description: '上海财经大学直属公办学院承办，财经类学科优势突出'
+          },
+          {
+            name: '上海财经大学 2+2',
+            enName: 'SUFE 2+2',
+            price: '¥4.8万',
+            projectType: '2+2',
+            targetUniversity: '英国、澳大利亚等多所教育部认可院校 (含考文垂大学、林肯大学等)',
+            majorsList: '会计与金融、商业管理、市场营销、经济学、计算机科学、人工智能等商科、工科、文科多方向',
+            domesticTuition: '8.28 万 / 年',
+            overseasTuition: '约 25 万 / 年',
+            requirements: '限普高生',
+            description: '多国别、多专业灵活升学路径'
+          },
+          {
+            name: '武汉理工大学 3+1 (艺术)',
+            enName: 'WUT 3+1 Art',
+            price: '¥15万',
+            projectType: '3+1',
+            targetUniversity: '英国创意艺术大学、德蒙福特大学等艺术类合作院校',
+            majorsList: '创意艺术与设计（含视觉传达设计、数字媒体艺术方向）',
+            domesticTuition: '7 万 / 年',
+            overseasTuition: '约 20 万 / 年',
+            requirements: '限普高生，全国首批 SQA 项目艺术专业开设院校，报考需提交作品集',
+            description: '全国首批 SQA 项目艺术专业开设院校，报考需提交作品集'
+          },
+          {
+            name: '上海交通大学 - 诺丁汉 2+2',
+            enName: 'SJTU - Nottingham',
+            price: '¥4.8万',
+            projectType: '2+2',
+            targetUniversity: '英国诺丁汉大学、诺丁汉大学马来西亚校区',
+            majorsList: '金融、会计与管理学、商业、经济和金融学、国际商务管理学',
+            domesticTuition: '7 万 / 年 + 1.8 万学籍注册费',
+            overseasTuition: '约 20 万 / 年 (英国); 约 8 万 / 年 (马来西亚)',
+            requirements: '限普高生',
+            description: '马来西亚校区与英国主校区共享学术标准，成绩达标可转申英国主校区'
+          },
+          {
+            name: '四川大学 3+1',
+            enName: 'Sichuan University 3+1',
+            price: '¥4.8万',
+            projectType: '3+1',
+            targetUniversity: '英国、澳大利亚等多所教育部认可院校 (含埃塞克斯大学、麦考瑞大学等)',
+            majorsList: '国际理财、商务会计、市场营销、人力资源管理、商务管理、计算机软件开发',
+            domesticTuition: '6.5 万 / 年 (商科); 6.98 万 / 年 (计算机)',
+            overseasTuition: '约 20 万 / 年',
+            requirements: '限普高生',
+            description: '四川大学本部办学，与统招生共享校园资源'
+          },
+          {
+            name: '中央财经大学 3+1',
+            enName: 'CUFE 3+1',
+            price: '¥4.8万',
+            projectType: '3+1',
+            targetUniversity: '英国、澳大利亚等多所教育部认可院校 (含埃塞克斯大学、麦考瑞大学等)',
+            majorsList: '国际金融、国际商务会计、国际商务管理、国际贸易与商务',
+            domesticTuition: '9.8 万 / 年',
+            overseasTuition: '约 20 万 / 年',
+            requirements: '限普高生',
+            description: '财经类顶尖院校，课程贴合 CFA、ACCA 等国际职业认证'
+          },
+          {
+            name: '首都师范大学 3+1',
+            enName: 'CNU 3+1',
+            price: '¥4.8万',
+            projectType: '3+1',
+            targetUniversity: '英国、澳大利亚等多所教育部认可院校 (含埃塞克斯大学、麦考瑞大学等)',
+            majorsList: '商务管理、国际理财、国际贸易与商务、商务会计，可对接教育类相关专业',
+            domesticTuition: '6.98 万 / 年',
+            overseasTuition: '约 20 万 / 年',
+            requirements: '限普高生',
+            description: '结合师范类学科优势，教育类方向特色突出'
+          },
+          {
+            name: '对外经贸大学 3+1',
+            enName: 'UIBE 3+1',
+            price: '¥4.8万',
+            projectType: '3+1',
+            targetUniversity: '英国、澳大利亚等多所教育部认可院校 (含埃塞克斯大学、麦考瑞大学等)',
+            majorsList: '商务管理、国际理财、商务会计、国际贸易与商务',
+            domesticTuition: '8.98 万 / 年',
+            overseasTuition: '约 20 万 / 年',
+            requirements: '限普高生',
+            description: '应用经济学双一流学科加持，国际经贸方向优势显著'
+          },
+          {
+            name: '上海立信金融 3+1',
+            enName: 'SUIF 3+1',
+            price: '¥4.8万',
+            projectType: '3+1',
+            targetUniversity: '英国、澳大利亚等多所教育部认可院校 (含埃塞克斯大学、麦考瑞大学等)',
+            majorsList: '金融服务、商务会计、国际贸易与商务',
+            domesticTuition: '7.5 万 / 年',
+            overseasTuition: '约 20 万 / 年',
+            requirements: '限普高生',
+            description: '会计金融特色院校，开设 ACCA、CFA 方向班'
+          },
+          {
+            name: '上外贤达 3+1',
+            enName: 'XISU 3+1',
+            price: '¥4.8万',
+            projectType: '3+1',
+            targetUniversity: '英国、澳大利亚等多所教育部认可院校 (含埃塞克斯大学、麦考瑞大学等)',
+            majorsList: '国际贸易与商务、国际理财、人力资源管理、商务信息技术、供应链管理、商务会计',
+            domesticTuition: '6.8 万 / 年',
+            overseasTuition: '约 20 万 / 年',
+            requirements: '限普高生',
+            description: '外语教学优势突出，小班化全英文授课'
+          },
+          {
+            name: '上海立信金融 2+1 (插班大二)',
+            enName: 'SUIF 2+1',
+            price: '¥6.8万',
+            projectType: '2+1',
+            targetUniversity: '英国、澳大利亚等多国教育部认可院校',
+            majorsList: '金融服务、商务会计、国际贸易与商务等商科方向',
+            domesticTuition: '6.6 万 / 年',
+            overseasTuition: '约 20 万 / 年',
+            requirements: '限普高生',
+            description: '加速培养模式，插班大二课程，缩短国内就读时长'
+          },
+          {
+            name: '上外贤达 2+1 (插班大二)',
+            enName: 'XISU 2+1',
+            price: '¥6.8万',
+            projectType: '2+1',
+            targetUniversity: '英国、澳大利亚等多所教育部认可院校 (含埃塞克斯大学、麦考瑞大学等)',
+            majorsList: '国际理财、商务管理',
+            domesticTuition: '8 万 / 年',
+            overseasTuition: '约 20 万 / 年',
+            requirements: '限普高生',
+            description: '学术基础扎实学生专属加速培养路径'
+          },
+          {
+            name: '上大温哥华电影学院 2+2',
+            enName: 'SHU-VFS 2+2',
+            price: '¥4.8万',
+            projectType: '2+2',
+            targetUniversity: '加拿大温哥华电影学院、美国纽约电影学院、英国伦敦艺术大学等影视类院校',
+            majorsList: '电影制作、3D 动画与视觉特效、影视造型设计、视觉媒体声音设计、影视表演、游戏设计',
+            domesticTuition: '12.1 万 / 年',
+            overseasTuition: '约 30 万 / 年',
+            requirements: '限普高生',
+            description: '北美电影工业标准教学体系，贾樟柯担任院长，以实践教学为主'
+          },
+          {
+            name: '南京传媒学院 2+2',
+            enName: 'CUCN 2+2',
+            price: '¥2.98万',
+            projectType: '2+2',
+            targetUniversity: '英国提赛德大学、韩国中央大学、美国纽约电影学院等多国传媒艺术类院校',
+            majorsList: '数字媒体传播、数字影视制作、动画与数字媒体艺术、游戏设计、音乐、视觉传达设计、商业与管理、表演、舞蹈等传媒艺术全方向',
+            domesticTuition: '9.8 万 / 年 (非艺术); 10.8 万 / 年 (非艺术); 11.8 万 / 年 (音乐)',
+            overseasTuition: '约 15-25 万 / 年',
+            requirements: '限普高生',
+            description: '传媒艺术类特色院校，专业覆盖影视、动画、音乐、设计全领域'
+          },
+          {
+            name: '华东政法大学 2+2',
+            enName: 'ECUPL 2+2',
+            price: '¥2.98万',
+            projectType: '2+2',
+            targetUniversity: '英国利兹大学、澳大利亚西澳大学、新加坡管理学院 (SIM) 合作院校等',
+            majorsList: '法学、会计与金融、商务管理、市场营销、经济学、人力资源管理、商法、商业分析等，可对接商科、法学、传媒多方向',
+            domesticTuition: '7 万 / 年 (西澳); 10.8 万 / 年 (新加坡); 11.8 万 / 年 (英澳)',
+            overseasTuition: '约 21-25 万 / 年；新加坡 12-15 万 / 年',
+            requirements: '限普高生',
+            description: '法学 + 商科复合培养特色，对接英国罗素集团、澳洲八大名校'
+          },
+          {
+            name: '上海大学 4+0',
+            enName: 'Shanghai University 4+0',
+            price: '¥12.8万',
+            projectType: '4+0',
+            targetUniversity: '澳大利亚悉尼科技大学 (UTS)',
+            majorsList: '金融学、国际经济与贸易、工商管理',
+            domesticTuition: '6.9 万元 / 年',
+            overseasTuition: '无（全程国内就读）',
+            requirements: '限普高生，本科线上，英语 100+，提供自主招生考前集训 5 天',
+            description: 'AACSB 认证商学院，对接 QS 前 100 院校，学位可中留服认证',
+            isDomesticOnly: true
+          },
+          {
+            name: '上海理工大学中英 4+0',
+            enName: 'USST SBC 4+0',
+            price: '¥9.8万',
+            projectType: '4+0',
+            targetUniversity: '英国布拉德福德大学、哈德斯菲尔德大学、利兹贝克特大学、利物浦约翰摩尔大学、谢菲尔德大学等 9 所英国公立大学',
+            majorsList: '工商管理、会展经济与管理、电子信息科学与技术、机械设计制造及其自动化',
+            domesticTuition: '10 万元 / 年',
+            overseasTuition: '无（全程国内就读）',
+            requirements: '限普高生，本科线上，语数英总分 270+，提供自主招生考前集训 5 天',
+            description: '教育部批准的一对多模式中外合作办学机构，工科商科全覆盖',
+            isDomesticOnly: true
+          },
+          {
+            name: '北京理工大学 3+0',
+            enName: 'BIT 3+0',
+            price: '¥25万',
+            projectType: '3+0',
+            targetUniversity: '英国中央兰开夏大学 (UCLan)',
+            majorsList: '电子工程',
+            domesticTuition: '大一 / 大二 7 万 / 年；大三 16 万',
+            overseasTuition: '无（全程国内就读）',
+            requirements: '限普高生，本科线上，数学 80，英语 90，物理 60，提供自主招生考前集训 5 天',
+            description: '985 高校主办，全程国内就读，工科定向培养',
+            isDomesticOnly: true
+          },
+          {
+            name: '沈阳师范大学 4+0',
+            enName: 'SYNU 4+0',
+            price: '¥25万',
+            projectType: '4+0',
+            targetUniversity: '美国富特海斯州立大学 (FHSU)',
+            majorsList: '国际经济与贸易、金融学、市场营销',
+            domesticTuition: '5 万 / 年',
+            overseasTuition: '无（全程国内就读）',
+            requirements: '普高生本科线上，英语 90+; 国际生，IELTS 5.0+，提供自主招生考前集训 5 天',
+            description: '教育部批准中美合作办学，可获中美双学位',
+            isDomesticOnly: true
+          },
+          {
+            name: '北京理工大学 4+0',
+            enName: 'BIT 4+0',
+            price: '¥25万',
+            projectType: '4+0',
+            targetUniversity: '美国犹他州立大学 (USU)',
+            majorsList: '国际经济',
+            domesticTuition: '大一 11 万；大二 10 万，大三 / 大四 9 万 / 年',
+            overseasTuition: '无（全程国内就读）',
+            requirements: '限普高生，本科线上，英语 90+, 数学 80+，提供自主招生考前集训 5 天',
+            description: '国内唯一 985 高校自主招生 4+0 项目，教育部认证',
+            isDomesticOnly: true
+          }
+        ]
+      }
+    ]
   }
 ];
 
@@ -736,6 +1099,7 @@ const COUNTRY_COLORS: Record<string, string> = {
   usa: 'text-indigo-600',
   canada: 'text-rose-600',
   newzealand: 'text-teal-600',
+  china: 'text-red-600',
 };
 
 export default function App() {
@@ -747,6 +1111,7 @@ export default function App() {
   const [selectedMajorIndex, setSelectedMajorIndex] = useState<number | null>(null);
   const [copyToast, setCopyToast] = useState<string | null>(null);
   const majorsSectionRef = useRef<HTMLDivElement>(null);
+  const priceDisplayRef = useRef<HTMLDivElement>(null);
 
   // Reset major tab and selection when university changes
   useEffect(() => {
@@ -820,7 +1185,7 @@ export default function App() {
   };
 
   const groupedAllUniversities = useMemo(() => {
-    const leftIds = ['singapore', 'hongkong', 'malaysia'];
+    const leftIds = ['singapore', 'hongkong', 'malaysia', 'china'];
     const rightIds = ['uk', 'australia', 'usa', 'canada', 'newzealand'];
     
     const left = PRICE_DATA.filter(c => leftIds.includes(c.id));
@@ -852,9 +1217,10 @@ export default function App() {
         {/* Price Display Area (Moved to top) */}
         {droppedUniversity && !isAllSelected && (
           <motion.div 
+            ref={priceDisplayRef}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="mb-8 p-6 md:p-10 bg-white rounded-[2rem] shadow-2xl border border-brand-blue/10 text-center relative"
+            className="mb-8 p-6 md:p-10 bg-white rounded-[2rem] shadow-2xl border border-brand-blue/10 text-center relative scroll-mt-4"
           >
             <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-brand-blue via-hermes-orange to-gold rounded-t-[2rem]" />
             <p className="text-slate-400 text-[10px] md:text-xs font-black uppercase tracking-[0.4em] mb-1 md:mb-2">Official Service Price</p>
@@ -877,9 +1243,46 @@ export default function App() {
               <p className="mt-2 text-[9px] md:text-[11px] text-slate-400 font-medium">以上费用均不含学费、官方申请费等第三方费用。</p>
             </div>
 
-            {/* Majors Section */}
-            {(droppedUniversity.undergradMajors || droppedUniversity.masterMajors) && (
-              <div ref={majorsSectionRef} className="mt-3 pt-0 relative">
+            {/* China Project Details */}
+            {droppedCountry?.id === 'china' ? (
+              <div className="mt-6 text-left space-y-4 border-t border-slate-100 pt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">项目类型</p>
+                    <p className="text-sm font-bold text-slate-900">{droppedUniversity.projectType}</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">升学/毕业院校</p>
+                    <p className="text-sm font-bold text-slate-900">{droppedUniversity.targetUniversity}</p>
+                  </div>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">开设专业</p>
+                  <p className="text-sm font-bold text-slate-900 leading-relaxed">{droppedUniversity.majorsList}</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">国内学费</p>
+                    <p className="text-sm font-bold text-brand-blue">{droppedUniversity.domesticTuition}</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">国外学费</p>
+                    <p className="text-sm font-bold text-hermes-orange">{droppedUniversity.overseasTuition}</p>
+                  </div>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">报考要求</p>
+                  <p className="text-sm font-bold text-slate-900">{droppedUniversity.requirements}</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">项目说明</p>
+                  <p className="text-sm font-medium text-slate-600 leading-relaxed">{droppedUniversity.description}</p>
+                </div>
+              </div>
+            ) : (
+              /* Majors Section */
+              (droppedUniversity.undergradMajors || droppedUniversity.masterMajors) && (
+                <div ref={majorsSectionRef} className="mt-3 pt-0 relative">
                 <div className={`transition-all duration-500 ${activeMajorTab ? 'sticky top-0 z-[100] bg-white/98 backdrop-blur-2xl py-4 -mx-6 md:-mx-10 px-6 md:px-10 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-b border-slate-100' : ''}`}>
                   <div className="flex items-center justify-center space-x-4 md:space-x-8 text-sm md:text-base font-bold">
                     {droppedUniversity.undergradMajors && (
@@ -979,7 +1382,7 @@ export default function App() {
                   )}
                 </AnimatePresence>
               </div>
-            )}
+            ))}
           </motion.div>
         )}
 
@@ -1051,13 +1454,18 @@ export default function App() {
                 onClick={clearRight}
                 className="w-full h-full bg-white text-slate-900 flex items-center justify-center px-4"
               >
-                <div className="flex items-center space-x-3">
-                  <GraduationCap className={`w-5 h-5 md:w-6 md:h-6 ${droppedCountry ? COUNTRY_COLORS[droppedCountry.id] : 'text-hermes-orange'}`} />
-                  <div className="flex flex-col text-left">
-                    <span className="font-bold text-xs md:text-sm leading-tight text-slate-900 line-clamp-1">{droppedUniversity.name}</span>
-                    <span className="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase tracking-wider line-clamp-1">{droppedUniversity.enName}</span>
+                  <div className="flex items-center space-x-3">
+                    <GraduationCap className={`w-5 h-5 md:w-6 md:h-6 ${droppedUniversity.isDomesticOnly ? 'text-[#0883c6]' : (droppedCountry ? COUNTRY_COLORS[droppedCountry.id] : 'text-hermes-orange')}`} />
+                    <div className="flex flex-col text-left">
+                      <div className="flex items-center space-x-1">
+                        <span className="font-bold text-xs md:text-sm leading-tight text-slate-900 line-clamp-1">{droppedUniversity.name}</span>
+                        {droppedUniversity.isDomesticOnly && (
+                          <span className="text-[10px] font-bold text-[#0883c6] whitespace-nowrap">（全程国内，无需出国）</span>
+                        )}
+                      </div>
+                      <span className="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase tracking-wider line-clamp-1">{droppedUniversity.enName}</span>
+                    </div>
                   </div>
-                </div>
               </motion.div>
             ) : (
               <div className="text-hermes-orange/40 flex items-center space-x-2 pointer-events-none z-10">
@@ -1161,9 +1569,14 @@ export default function App() {
                       {country.categories.flatMap(cat => cat.items).map((uni, idx) => (
                         <div key={idx} className="px-6 py-3 flex items-center justify-between hover:bg-slate-50/50 transition-colors">
                           <div className="flex items-center space-x-3">
-                            <GraduationCap className={`w-4 h-4 ${COUNTRY_COLORS[country.id] || 'text-slate-400'}`} />
+                            <GraduationCap className={`w-4 h-4 ${uni.isDomesticOnly ? 'text-[#0883c6]' : (COUNTRY_COLORS[country.id] || 'text-slate-400')}`} />
                             <div className="flex flex-col">
-                              <span className="text-slate-900 font-bold text-sm">{uni.name}</span>
+                              <div className="flex items-center space-x-1">
+                                <span className="text-slate-900 font-bold text-sm">{uni.name}</span>
+                                {uni.isDomesticOnly && (
+                                  <span className="text-[10px] font-bold text-[#0883c6] whitespace-nowrap">（全程国内，无需出国）</span>
+                                )}
+                              </div>
                               <span className="text-slate-400 text-[10px] font-aptos">{uni.enName}</span>
                             </div>
                           </div>
@@ -1190,9 +1603,14 @@ export default function App() {
                       {country.categories.flatMap(cat => cat.items).map((uni, idx) => (
                         <div key={idx} className="px-6 py-3 flex items-center justify-between hover:bg-slate-50/50 transition-colors">
                           <div className="flex items-center space-x-3">
-                            <GraduationCap className={`w-4 h-4 ${COUNTRY_COLORS[country.id] || 'text-slate-400'}`} />
+                            <GraduationCap className={`w-4 h-4 ${uni.isDomesticOnly ? 'text-[#0883c6]' : (COUNTRY_COLORS[country.id] || 'text-slate-400')}`} />
                             <div className="flex flex-col">
-                              <span className="text-slate-900 font-bold text-sm">{uni.name}</span>
+                              <div className="flex items-center space-x-1">
+                                <span className="text-slate-900 font-bold text-sm">{uni.name}</span>
+                                {uni.isDomesticOnly && (
+                                  <span className="text-[10px] font-bold text-[#0883c6] whitespace-nowrap">（全程国内，无需出国）</span>
+                                )}
+                              </div>
                               <span className="text-slate-400 text-[10px] font-aptos">{uni.enName}</span>
                             </div>
                           </div>
@@ -1215,7 +1633,11 @@ export default function App() {
                         setDroppedUniversity(null);
                       } else {
                         setDroppedUniversity(uni);
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        setTimeout(() => {
+                          if (priceDisplayRef.current) {
+                            priceDisplayRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }
+                        }, 100);
                       }
                     }}
                     whileHover={{ scale: 1.05 }}
@@ -1225,9 +1647,14 @@ export default function App() {
                     }`}
                   >
                     <div className="flex items-center space-x-3">
-                      <GraduationCap className={`w-4 h-4 flex-shrink-0 ${COUNTRY_COLORS[droppedCountry.id] || 'text-slate-400'} ${droppedUniversity?.name === uni.name ? 'text-hermes-orange' : ''}`} />
+                      <GraduationCap className={`w-4 h-4 flex-shrink-0 ${uni.isDomesticOnly ? 'text-[#0883c6]' : (COUNTRY_COLORS[droppedCountry.id] || 'text-slate-400')} ${droppedUniversity?.name === uni.name && !uni.isDomesticOnly ? 'text-hermes-orange' : ''}`} />
                       <div className="flex flex-col text-left">
-                        <span className={`font-bold text-xs md:text-sm line-clamp-1 ${droppedUniversity?.name === uni.name ? 'text-hermes-orange' : 'text-slate-700 group-hover:text-hermes-orange'}`}>{uni.name}</span>
+                        <div className="flex items-center space-x-1">
+                          <span className={`font-bold text-xs md:text-sm line-clamp-1 ${droppedUniversity?.name === uni.name ? 'text-hermes-orange' : 'text-slate-700 group-hover:text-hermes-orange'}`}>{uni.name}</span>
+                          {uni.isDomesticOnly && (
+                            <span className="text-[10px] font-bold text-[#0883c6] whitespace-nowrap">（全程国内，无需出国）</span>
+                          )}
+                        </div>
                         <span className="text-[9px] md:text-[10px] text-slate-400 line-clamp-1 font-aptos">{uni.enName}</span>
                       </div>
                     </div>
