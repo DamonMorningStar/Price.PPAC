@@ -145,7 +145,6 @@ const PRICE_DATA: CountryData[] = [
           { name: '新加坡管理大学', enName: 'Singapore Management University (SMU)', price: '¥25,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
           { name: '新加坡科技与设计大学', enName: 'Singapore University of Technology and Design (SUTD)', price: '¥25,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
           { name: '新加坡理工大学', enName: 'Singapore Institute of Technology (SIT)', price: '¥25,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '本科直升大二PPAC(3个月｜9个月)', enName: 'premium planning academic curriculum', price: '13.8万｜19.8万' },
           { name: 'Kaplan 高等教育学院', enName: 'Kaplan Higher Education Academy', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
           { name: 'PSB 学院', enName: 'PSB Academy', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
           { name: '科廷大学新加坡分校', enName: 'Curtin Singapore', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
@@ -977,6 +976,45 @@ const PRICE_DATA: CountryData[] = [
         ]
       }
     ]
+  },
+  {
+    id: 'premium',
+    name: '精英留学',
+    enName: 'Premium Project',
+    flag: '🔥',
+    categories: [
+      {
+        title: 'Premium Programs',
+        items: [
+          {
+            name: '本科直升大二PPAC(3个月｜9个月)',
+            enName: 'premium planning academic curriculum',
+            price: '13.8万｜19.8万',
+            projectType: '0.5+1.5',
+            targetUniversity: '都柏林大学学院QS118、考文垂大学QS540，新加坡校区',
+            majorsList: '商业分析、金融科技、管理学、数字商务等商科全方向，部分IT方向',
+            domesticTuition: '13.8万(3个月)；19.8万(9个月)',
+            overseasTuition: '14万～22万',
+            requirements: '普高生高三在读，国际生高二在读，等同雅思5.0',
+            description: '全球认证资历框架课程120学分，最快3个月完成（允许online），全程无考试。免语言（无需额外考雅思）直升全球近百所名校！部分院校如都柏林大学学院可减免大一直升大二，最快1.5年本科毕业。',
+            undergradMajors: [
+              { name: '商业分析', enName: 'Bachelor of Business Studies (Honor) in Business Analytics' },
+              { name: '数字商务', enName: 'Bachelor of Business Studies (Honor) in Digital Business' },
+              { name: '管理学', enName: 'Bachelor of Business Studies (Honor) in Management' },
+              { name: '市场营销', enName: 'Bachelor of Business Studies (Honor) in Marketing' },
+              { name: '供应链管理', enName: 'Bachelor of Business Studies (Honor) in Supply Chain Management' },
+              { name: '人力资源管理', enName: 'Bachelor of Business Studies (Honor) in Human Resource Management' },
+              { name: '金融科技', enName: 'Bachelor of Business Studies (Honor) in Fintech' },
+              { name: '金融学', enName: 'Bachelor of Business Studies (Honor) in Finance' },
+              { name: '项目管理', enName: 'Bachelor of Business Studies (Honor) in Project Management' },
+            ],
+            masterMajors: [
+              { name: '管理学', enName: 'Master of Science in Management' }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];
 
@@ -1100,6 +1138,7 @@ const COUNTRY_COLORS: Record<string, string> = {
   canada: 'text-rose-600',
   newzealand: 'text-teal-600',
   china: 'text-red-600',
+  premium: 'text-orange-500',
 };
 
 export default function App() {
@@ -1185,7 +1224,7 @@ export default function App() {
   };
 
   const groupedAllUniversities = useMemo(() => {
-    const leftIds = ['singapore', 'hongkong', 'malaysia', 'china'];
+    const leftIds = ['singapore', 'hongkong', 'malaysia', 'china', 'premium'];
     const rightIds = ['uk', 'australia', 'usa', 'canada', 'newzealand'];
     
     const left = PRICE_DATA.filter(c => leftIds.includes(c.id));
@@ -1243,8 +1282,8 @@ export default function App() {
               <p className="mt-2 text-[9px] md:text-[11px] text-slate-400 font-medium">以上费用均不含学费、官方申请费等第三方费用。</p>
             </div>
 
-            {/* China Project Details */}
-            {droppedCountry?.id === 'china' ? (
+            {/* Project Details (for China and Premium Projects) */}
+            {droppedUniversity.projectType && (
               <div className="mt-6 text-left space-y-4 border-t border-slate-100 pt-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-1">
@@ -1279,10 +1318,11 @@ export default function App() {
                   <p className="text-sm font-medium text-slate-600 leading-relaxed">{droppedUniversity.description}</p>
                 </div>
               </div>
-            ) : (
-              /* Majors Section */
-              (droppedUniversity.undergradMajors || droppedUniversity.masterMajors) && (
-                <div ref={majorsSectionRef} className="mt-3 pt-0 relative">
+            )}
+
+            {/* Majors Section */}
+            {(droppedUniversity.undergradMajors || droppedUniversity.masterMajors) && (
+              <div ref={majorsSectionRef} className="mt-3 pt-0 relative">
                 <div className={`transition-all duration-500 ${activeMajorTab ? 'sticky top-0 z-[100] bg-white/98 backdrop-blur-2xl py-4 -mx-6 md:-mx-10 px-6 md:px-10 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-b border-slate-100' : ''}`}>
                   <div className="flex items-center justify-center space-x-4 md:space-x-8 text-sm md:text-base font-bold">
                     {droppedUniversity.undergradMajors && (
@@ -1356,14 +1396,14 @@ export default function App() {
                                         <Copy className="w-3 h-3" />
                                       </button>
                                       <a 
-                                        href={major.link || `https://www.google.com/search?q=${droppedUniversity.name}+${major.enName}+official+program+page`}
+                                        href="https://topuni.com.cn"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={(e) => e.stopPropagation()}
                                         className="p-1 text-slate-400 hover:text-brand-blue hover:bg-brand-blue/10 rounded-md transition-all"
-                                        title={major.link ? "查看详情" : "搜索专业详情"}
+                                        title="查看详情"
                                       >
-                                        <ExternalLink className={`w-3 h-3 ${major.link ? '' : 'opacity-40'}`} />
+                                        <ExternalLink className="w-3 h-3" />
                                       </a>
                                     </div>
                                   </div>
@@ -1382,7 +1422,7 @@ export default function App() {
                   )}
                 </AnimatePresence>
               </div>
-            ))}
+            )}
           </motion.div>
         )}
 
