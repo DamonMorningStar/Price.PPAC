@@ -81,22 +81,22 @@ const PRICE_DATA: CountryData[] = [
       {
         title: 'Top Universities',
         items: [
-          { name: '牛津大学', enName: 'University of Oxford', price: '¥80,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '剑桥大学', enName: 'University of Cambridge', price: '¥80,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '帝国理工学院', enName: 'Imperial College London', price: '¥60,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '伦敦政治经济学院', enName: 'London School of Economics (LSE)', price: '¥60,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '伦敦大学学院', enName: 'University College London (UCL)', price: '¥50,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '伦敦国王学院', enName: 'King\'s College London (KCL)', price: '¥30,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '华威大学', enName: 'University of Warwick', price: '¥30,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '曼彻斯特大学', enName: 'University of Manchester', price: '¥30,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '爱丁堡大学', enName: 'University of Edinburgh', price: '¥30,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '伯明翰大学', enName: 'University of Birmingham', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '格拉斯哥大学', enName: 'University of Glasgow', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '布里斯托大学', enName: 'University of Bristol', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '南安普顿大学', enName: 'University of Southampton', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '利兹大学', enName: 'University of Leeds', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '杜伦大学', enName: 'Durham University', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '英国其他', enName: 'Other UK Universities', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '牛津大学', enName: 'University of Oxford', price: '¥80,000 ｜ 时价', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '剑桥大学', enName: 'University of Cambridge', price: '¥80,000 ｜ 时价', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '帝国理工学院', enName: 'Imperial College London', price: '¥60,000 ｜ 时价', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '伦敦政治经济学院', enName: 'London School of Economics (LSE)', price: '¥60,000 ｜ 时价', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '伦敦大学学院', enName: 'University College London (UCL)', price: '¥50,000 ｜ ¥35万', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '伦敦国王学院', enName: 'King\'s College London (KCL)', price: '¥30,000 ｜ ¥25万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '华威大学', enName: 'University of Warwick', price: '¥30,000 ｜ ¥25万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '曼彻斯特大学', enName: 'University of Manchester', price: '¥30,000 ｜ ¥25万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '爱丁堡大学', enName: 'University of Edinburgh', price: '¥30,000 ｜ ¥25万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '伯明翰大学', enName: 'University of Birmingham', price: '¥3,000 ｜ ¥12万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '格拉斯哥大学', enName: 'University of Glasgow', price: '¥3,000 ｜ ¥12万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '布里斯托大学', enName: 'University of Bristol', price: '¥3,000 ｜ ¥25万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '南安普顿大学', enName: 'University of Southampton', price: '¥3,000 ｜ ¥12万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '利兹大学', enName: 'University of Leeds', price: '¥3,000 ｜ ¥12万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '杜伦大学', enName: 'Durham University', price: '¥3,000 ｜ ¥12万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '英国其他', enName: 'Other UK Universities', price: '¥3,000 ｜ ¥12万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
         ]
       }
     ]
@@ -110,22 +110,22 @@ const PRICE_DATA: CountryData[] = [
       {
         title: 'Top Universities',
         items: [
-          { name: '墨尔本大学', enName: 'University of Melbourne', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '悉尼大学', enName: 'University of Sydney', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '新南威尔士大学', enName: 'University of New South Wales (UNSW)', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '澳国立大学（普通｜直录）', enName: 'Australian National University (ANU)', price: '¥3000｜¥9.8万', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '昆士兰大学', enName: 'University of Queensland (UQ)', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '莫那什大学', enName: 'Monash University', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '西澳大学', enName: 'University of Western Australia (UWA)', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '阿德莱德大学', enName: 'University of Adelaide', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '悉尼科技大学', enName: 'University of Technology Sydney', price: '¥3000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '麦考瑞大学', enName: 'Macquarie University', price: '¥3000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '皇家墨尔本理工大学', enName: 'RMIT University', price: '¥3000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '迪肯大学', enName: 'Deakin University', price: '¥3000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '科廷大学', enName: 'Curtin University', price: '¥3000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '纽卡斯尔大学', enName: 'University of Newcastle', price: '¥3000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '昆士兰科技大学', enName: 'Queensland University of Technology', price: '¥3000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
-          { name: '澳洲其他', enName: 'Other Australian Universities', price: '¥3,000', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '墨尔本大学', enName: 'University of Melbourne', price: '¥3,000 ｜ ¥25万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '悉尼大学', enName: 'University of Sydney', price: '¥3,000 ｜ ¥25万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '新南威尔士大学', enName: 'University of New South Wales (UNSW)', price: '¥3,000 ｜ ¥25万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '澳国立大学（普通｜直录）', enName: 'Australian National University (ANU)', price: '¥3000 ｜ ¥22万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '昆士兰大学', enName: 'University of Queensland (UQ)', price: '¥3,000 ｜ ¥25万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '莫那什大学', enName: 'Monash University', price: '¥3,000 ｜ ¥25万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '西澳大学', enName: 'University of Western Australia (UWA)', price: '¥3,000 ｜ ¥25万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '阿德莱德大学', enName: 'University of Adelaide', price: '¥3,000 ｜ ¥22万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '悉尼科技大学', enName: 'University of Technology Sydney', price: '¥3000 ｜ ¥9.8万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '麦考瑞大学', enName: 'Macquarie University', price: '¥3000 ｜ ¥9.8万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '皇家墨尔本理工大学', enName: 'RMIT University', price: '¥3000 ｜ ¥9.8万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '迪肯大学', enName: 'Deakin University', price: '¥3000 ｜ ¥9.8万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '科廷大学', enName: 'Curtin University', price: '¥3000 ｜ ¥9.8万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '纽卡斯尔大学', enName: 'University of Newcastle', price: '¥3000 ｜ ¥9.8万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '昆士兰科技大学', enName: 'Queensland University of Technology', price: '¥3000 ｜ ¥9.8万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
+          { name: '澳洲其他', enName: 'Other Australian Universities', price: '¥3,000 ｜ ¥9.8万起', undergradMajors: SAMPLE_MAJORS.undergrad, masterMajors: SAMPLE_MAJORS.master },
           { name: '学术背景低于录取标准', enName: 'Customized Background Enhancement', price: '咨询定价' },
         ]
       }
@@ -987,11 +987,11 @@ const PRICE_DATA: CountryData[] = [
         title: 'Premium Programs',
         items: [
           {
-            name: '本科直升大二PPAC(3个月｜9个月)',
+            name: '本科直升大二PPAC',
             enName: 'premium planning academic curriculum',
             price: '13.8万｜19.8万',
             projectType: '0.5+1.5',
-            targetUniversity: '都柏林大学学院QS118、考文垂大学QS540，新加坡校区',
+            targetUniversity: '都柏林大学学院QS118、考文垂大学QS540，科廷大学QS170，均为新加坡校区',
             majorsList: '商业分析、金融科技、管理学、数字商务等商科全方向，部分IT方向',
             domesticTuition: '13.8万(3个月)；19.8万(9个月)',
             overseasTuition: '14万～22万',
@@ -1010,6 +1010,29 @@ const PRICE_DATA: CountryData[] = [
             ],
             masterMajors: [
               { name: '管理学', enName: 'Master of Science in Management' }
+            ]
+          },
+          {
+            name: '初中直升国际本科',
+            enName: 'International Bachelor Path for Junior High',
+            price: '13.8万',
+            projectType: '9个月+2~2.5年',
+            targetUniversity: '伯明翰大学、都柏林大学学院、考文垂大学、科廷大学、格林威治大学、伦敦城市大学等，均为新加坡校区',
+            majorsList: '商业分析、金融科技、管理学、数字商务等商科全方向',
+            domesticTuition: '13.8万(含国内3个月+新加坡6个月)',
+            overseasTuition: '28～35万',
+            requirements: '初中毕业，年满16周岁',
+            description: '中英文双语学习9个月(国内3个月、新加坡6个月)，100%升入本科，任选项目中合作的大学和专业。无考试、免语言入学。',
+            undergradMajors: [
+              { name: '商业分析', enName: 'Bachelor of Business Studies (Honor) in Business Analytics' },
+              { name: '数字商务', enName: 'Bachelor of Business Studies (Honor) in Digital Business' },
+              { name: '管理学', enName: 'Bachelor of Business Studies (Honor) in Management' },
+              { name: '市场营销', enName: 'Bachelor of Business Studies (Honor) in Marketing' },
+              { name: '供应链管理', enName: 'Bachelor of Business Studies (Honor) in Supply Chain Management' },
+              { name: '人力资源管理', enName: 'Bachelor of Business Studies (Honor) in Human Resource Management' },
+              { name: '金融科技', enName: 'Bachelor of Business Studies (Honor) in Fintech' },
+              { name: '金融学', enName: 'Bachelor of Business Studies (Honor) in Finance' },
+              { name: '项目管理', enName: 'Bachelor of Business Studies (Honor) in Project Management' },
             ]
           }
         ]
@@ -1223,6 +1246,16 @@ export default function App() {
     setDroppedUniversity(null);
   };
 
+  const renderPriceText = (price: string) => {
+    if (!price.includes('起')) return price;
+    return price.split('起').map((part, i, arr) => (
+      <React.Fragment key={i}>
+        {part}
+        {i < arr.length - 1 && <span className="text-[0.55em] font-bold ml-px">起</span>}
+      </React.Fragment>
+    ));
+  };
+
   const groupedAllUniversities = useMemo(() => {
     const leftIds = ['singapore', 'hongkong', 'malaysia', 'china', 'premium'];
     const rightIds = ['uk', 'australia', 'usa', 'canada', 'newzealand'];
@@ -1269,10 +1302,10 @@ export default function App() {
               {droppedUniversity.price.includes('¥') ? (
                 <>
                   <span className={`${droppedUniversity.price.includes('｜') ? 'text-lg md:text-2xl' : 'text-xl md:text-3xl'} mr-1 md:mr-2 opacity-30`}>¥</span>
-                  {droppedUniversity.price.replace(/¥/g, '')}
+                  {renderPriceText(droppedUniversity.price.replace(/¥/g, ''))}
                 </>
               ) : (
-                <span className="text-hermes-orange italic">{droppedUniversity.price}</span>
+                <span className="text-hermes-orange italic">{renderPriceText(droppedUniversity.price)}</span>
               )}
             </div>
             <div className="h-[1px] w-12 md:w-20 bg-slate-100 mx-auto mb-1 md:mb-2" />
@@ -1620,7 +1653,7 @@ export default function App() {
                               <span className="text-slate-400 text-[10px] font-aptos">{uni.enName}</span>
                             </div>
                           </div>
-                          <span className={`text-brand-blue font-black font-aptos ${uni.price.includes('｜') ? 'text-[10px] md:text-xs' : 'text-sm'}`}>{uni.price}</span>
+                          <span className={`text-brand-blue font-black font-aptos ${uni.price.includes('｜') ? 'text-[10px] md:text-xs' : 'text-sm'}`}>{renderPriceText(uni.price)}</span>
                         </div>
                       ))}
                     </div>
@@ -1654,7 +1687,7 @@ export default function App() {
                               <span className="text-slate-400 text-[10px] font-aptos">{uni.enName}</span>
                             </div>
                           </div>
-                          <span className={`text-brand-blue font-black font-aptos ${uni.price.includes('｜') ? 'text-[10px] md:text-xs' : 'text-sm'}`}>{uni.price}</span>
+                          <span className={`text-brand-blue font-black font-aptos ${uni.price.includes('｜') ? 'text-[10px] md:text-xs' : 'text-sm'}`}>{renderPriceText(uni.price)}</span>
                         </div>
                       ))}
                     </div>
