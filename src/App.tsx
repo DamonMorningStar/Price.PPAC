@@ -987,7 +987,7 @@ const PRICE_DATA: CountryData[] = [
         title: 'Premium Programs',
         items: [
           {
-            name: '本科直升大二PPAC',
+            name: '高中毕业直升大二',
             enName: 'premium planning academic curriculum',
             price: '13.8万｜19.8万',
             projectType: '0.5+1.5',
@@ -996,7 +996,7 @@ const PRICE_DATA: CountryData[] = [
             domesticTuition: '13.8万(3个月)；19.8万(9个月)',
             overseasTuition: '14万～22万',
             requirements: '普高生高三在读，国际生高二在读，等同雅思5.0',
-            description: '全球认证资历框架课程120学分，最快3个月完成（允许online），全程无考试。免语言（无需额外考雅思）直升全球近百所名校！部分院校如都柏林大学学院可减免大一直升大二，最快1.5年本科毕业。',
+            description: '高中在读期间先修课程，全球认证资历框架课程120学分，最快3个月完成（允许online），全程无考试。免语言（无需额外考雅思）直升全球近百所名校！部分院校如都柏林大学学院可减免大一直升大二，最快1.5年本科毕业。',
             undergradMajors: [
               { name: '商业分析', enName: 'Bachelor of Business Studies (Honor) in Business Analytics' },
               { name: '数字商务', enName: 'Bachelor of Business Studies (Honor) in Digital Business' },
@@ -1010,6 +1010,21 @@ const PRICE_DATA: CountryData[] = [
             ],
             masterMajors: [
               { name: '管理学', enName: 'Master of Science in Management' }
+            ]
+          },
+          {
+            name: '港中深硕士直录',
+            enName: 'CUHK-Shenzhen Master Direct Entry',
+            price: '25万',
+            projectType: '2年制硕士',
+            targetUniversity: '香港中文大学深圳校区',
+            majorsList: '可持续发展社会科学硕士',
+            domesticTuition: '13万/年，共2年',
+            overseasTuition: '无需出国',
+            requirements: '本科毕业（可优化GPA门槛、协调跨专业录取），英语良好',
+            description: '世界一流大学 香港中文大学深圳校区硕士项目，每年10月至次年4月报名，9月入学！毕业授予香港中文大学硕士学位！',
+            masterMajors: [
+              { name: '可持续发展社会科学', enName: 'Master of Social Science in Sustainability' }
             ]
           },
           {
